@@ -1,0 +1,115 @@
+.mr-buttons {
+    @include flex;
+
+    @include responsive(phone-portrait){
+        flex-direction: column;
+    }
+
+    .btn-item {
+        text-align: center;
+
+        &:not(:last-child){
+            margin-right: 25px;
+
+            @include responsive(phone-portrait){
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        
+        a {
+            display: block;
+            padding: 0.53em 2.3em;
+            background-color: $color-white;
+            border: 2px solid $color-white;
+            color: $color-dark-green-1;
+            border-radius: 50px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 18px;
+            line-height: 1.7em;
+            min-width: 165px;
+            @include transition-linear-2s;
+            text-transform: capitalize;
+
+            @include responsive(phone-landscape){
+                padding: 0.5em 1.6em;
+            }
+            
+            &:hover {
+                background-color: $color-light-violet-2;
+                border-color: $color-white;
+                color: $color-white;
+            }
+
+            #mr-footer & {
+                padding: 0.53em 0;
+            }
+        }
+
+        &.btn-no-bg {
+            a {
+                background-color: transparent;
+                color: $color-white;
+
+                &:hover {
+                    background-color: $color-light-violet-2;
+                    border-color: $color-white;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+
+.mr-link {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 30px;
+    position: relative;
+    color: $color-dark-violet-2;
+    text-transform: capitalize;
+    @include transition-2s;
+
+    &:hover {
+        padding-right: 35px;
+        color: $color-light-violet-2;
+    }
+
+    &::after {
+        @include fontawesome-font;
+        content: '\f061';
+        position: absolute;
+        right: 0;
+        line-height: 1.7;
+        @include transition-2s;
+    }
+}
+
+
+// Services sECTION
+.service-items {
+    
+    .ser-item {
+
+        .mr-link {
+            color: $color-dark-violet-0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding-right: 34px;
+
+            &:hover {
+                padding-right: 40px;
+                color: $color-light-violet-2;
+            }
+
+            &::after {
+                line-height: 1.9;
+            }
+        }
+    }
+}
+

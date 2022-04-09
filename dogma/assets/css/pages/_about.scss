@@ -1,0 +1,96 @@
+
+.mr-section.sec-our-story {
+    padding: 0;
+    overflow: hidden;
+
+    .mr-inner-wrapper {
+        background-color: $color-lighter-violet-1;
+        @include flex;
+
+        p:not(:last-child) {
+            margin-bottom: 4%;
+        }
+
+        .large-image {
+            width: 45%;
+            position: relative;
+            padding-top: 6rem;
+
+            @include responsive(tablet-landscape){
+                display: none;  
+            }
+
+            &::after {
+                content:'';
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                right: -25%;
+                top: 0;
+                color: $color-dark-violet-1;
+                background: linear-gradient(270deg, $color-lighter-violet-1 52.53%, rgba(247, 240, 255, 0) 100%);
+            }
+        }
+
+        .jun-takama {
+            position: absolute;
+            object-position: center;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+
+            &.for-mobile {
+                display: none;
+
+                @include responsive(tablet-landscape){
+                    display: block;  
+                    position: relative;
+                    height: auto;
+                    max-width: 400px;
+                    margin: 35px auto;
+                }
+            }
+
+            &.for-desktop {
+                @include responsive(tablet-landscape){
+                    display: none;  
+                }
+            }
+        }
+
+        .mr-content {
+            padding: 12rem 6% 40px 7%;
+            width: 60%;
+            margin-left: auto;
+            background-color: $color-lighter-violet-1;
+
+            @include responsive(tablet-landscape){
+                width: 100%;
+            }
+
+            @include responsive(phone-landscape){
+                padding-top: 10rem;
+            }
+        }
+    }
+}
+
+.owner {
+    font-size: 36px;
+    font-family: $coniferous-font-family;
+    font-weight: 400;
+    font-style: normal;
+    color: $color-dark-violet-1;
+    margin: 40px 0;
+
+    @include responsive(phone-landscape){
+        font-size: 33px;
+    }
+
+    span {
+        display: block;
+        font-weight: 100;
+        font-size: 18px;
+        font-family: $default-font-family;
+    }
+}

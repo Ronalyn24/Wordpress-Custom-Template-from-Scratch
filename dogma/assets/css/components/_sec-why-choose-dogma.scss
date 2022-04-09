@@ -1,0 +1,95 @@
+.mr-section.sec-why-choose-dogma {
+    padding: 7rem 0;
+
+    @include responsive(phone-landscape){
+        padding: 5rem 0;
+    }
+}
+
+.service-items.wc_dogma-items {
+
+    .ser-item {
+        margin-bottom: 2rem;
+        padding-bottom: 0;
+
+        .mr-title {
+            color: $color-white;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            padding-right: 0;
+            color: $color-white;
+        }
+    }
+
+    .inner-ctn {
+        position: relative;
+        overflow: hidden;
+        padding: 80% 2rem 2rem;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            background: linear-gradient(180deg, rgba(206, 106, 176, 0.0001) 0%, $color-light-violet-2 100%);
+        }
+
+        .thumbnail-img {
+            top: 0;
+            left: 0;
+            position: absolute;
+            @include image-object-fit;
+        }
+    }
+
+    &.fullwidth {
+        position: relative;
+        overflow: hidden;
+        padding: 33% 30px 25px;
+        border-radius: 10px;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            background: linear-gradient(180deg, rgba(206, 106, 176, 0.0001) 0%, $color-light-violet-2 100%);
+        }
+
+        .ser-item {
+            width: 28.6%;
+            margin-right: 7%;
+
+            @include responsive(tablet-portrait){
+                width: 45%;
+                margin-right: 5%;
+            }
+
+            @include responsive(small-phone-landscape){
+                width: 100%;
+                margin-right: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        
+        .thumbnail-img {
+            top: 0;
+            left: 0;
+            position: absolute;
+            @include image-object-fit;
+        }
+    }
+}

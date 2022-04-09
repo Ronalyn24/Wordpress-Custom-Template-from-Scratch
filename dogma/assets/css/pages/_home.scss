@@ -1,0 +1,197 @@
+
+.sec-banner {
+    background: var(--banner-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    max-height: 1080px;
+    @include flex;
+    @include align-items-center;
+
+    @include responsive(tablet-portrait){
+        height: auto;
+    }
+
+    @include responsive(phone-landscape){
+        padding: 180px 0 0;
+        background-image: none;
+        background: rgb(113,51,108);
+        background: linear-gradient(156deg, rgba(113,51,108,1) 0%, rgba(148,67,141,1) 100%);
+    }
+
+    &::before {
+        content: "";
+        background: #71336c;
+        background: linear-gradient(90deg, #71336c 0%, rgba(0, 0, 0, 0.24) 100%);        
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include responsive(phone-landscape) {
+            background: linear-gradient(156deg, rgba(113,51,108,1) 0%, rgba(148,67,141,1) 100%);
+        }
+    }
+    
+    .mr-row {
+        padding-bottom: 5rem;
+
+        @include responsive(phone-landscape){
+            padding-bottom: 0;
+        }
+    }
+
+    .mr-content {  
+        max-width: 626px;
+        padding: 0;
+
+        a.test {
+            border-bottom: 2px solid rgba(255,255,255,0.5);
+        }
+    }
+
+    .mr-buttons {
+        @include responsive(phone-landscape){
+            padding-bottom: 4rem;
+        }
+
+        @include responsive(phone-portrait){
+            padding-bottom: 55px;
+        }
+
+        li.btn-item {
+
+            @include responsive(phone-landscape){
+                text-align: left;
+                margin-bottom: 0;
+            }
+
+            a {
+                @include responsive(phone-landscape){
+                    display: inline-block;
+                }
+
+                &:hover {
+                    @include responsive(phone-landscape){
+                        border-color: $color-white;
+                    }
+                }
+            }
+
+            &.btn-no-bg {
+                @include responsive(phone-landscape){
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .banner-image {
+        margin-bottom: -50%;
+        z-index: 99;
+        position: relative;
+        border-radius: 10px;
+        display: none;
+
+        @include responsive(phone-landscape){
+            display: block;
+        }
+    }
+}
+
+.sec-award {
+    padding: 8rem 0;
+
+    @include responsive(tablet-portrait){
+        padding: 4rem 0;
+    }
+
+    .mr-row-columns {
+        @include responsive(tablet-portrait){
+            flex-direction: column;
+        }
+    }
+
+    .col-1-of-3 {
+        padding-top: 4rem;
+
+        @include responsive(tablet-portrait){
+            width: 100%;
+            padding-top: 3rem;
+        }
+
+        .mr-sub-title {
+            margin-bottom: 30px;
+        }
+    }
+
+    .imgs-award {
+        @include flex;
+        margin-right: 0;
+        padding-right: 5%;
+
+        @include responsive(tablet-portrait){
+            width: 100%;
+            padding-right: 0;
+        }
+
+        @include responsive(small-phone-landscape){
+            flex-direction: column;
+        }
+
+        .img-award-item {
+            width: 50%;
+
+            @include responsive(small-phone-landscape){
+                width: 100%;
+            }
+        }
+        
+        .first-aw-item {
+            border-radius: 10px;
+            margin-right: 30px;
+            overflow: hidden;
+            height: 540px;
+            border-radius: 10px;
+
+            @include responsive(small-phone-landscape){
+                height: auto;
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            img {
+                @include image-object-fit;
+            }
+        }
+    }
+
+    .second-aw-item {
+
+        .aw-item-ctn {
+            height: 255px;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+
+            @include responsive(small-phone-landscape){
+                height: auto;
+            }
+
+            img {
+                @include image-object-fit;
+            }
+            &:not(:last-child){
+                margin-bottom: 30px;
+
+                @include responsive(small-phone-landscape){
+                    margin-bottom: 30px;
+                } 
+            }
+        }
+    }
+}
+
+

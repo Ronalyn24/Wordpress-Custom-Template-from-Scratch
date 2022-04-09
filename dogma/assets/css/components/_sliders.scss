@@ -1,0 +1,324 @@
+
+.mr-section.sec-slider {
+    
+    .mr-row {
+        margin: 0 0 0 auto;
+        max-width: 1433px;
+        width: 95%;
+
+        @include responsive(phone-landscape){
+            width: 100%;
+            padding-left: 8%;
+        }
+    }
+
+    .google-logo {
+        margin-bottom: 40px;
+    }
+
+    &.sec-reviews {
+        padding-bottom: 3rem;
+
+        @include responsive(tablet-portrait){
+            padding: 4rem 0 2rem;
+        }
+
+        .slider-btn-control.s-reviews {
+            padding-right: 13%;
+        }
+    }
+
+    &.sec-space {
+        .mr-daycare-page &,
+        .mr-dog-walking-page &,
+        .mr-ob-page &,
+        .mr-dog-grooming-page &,
+        .mr-agility-page & {
+            padding-bottom: 1rem;
+
+            @include responsive(tablet-portrait){
+                padding-bottom: 3rem;
+            }
+
+            @include responsive(small-phone-landscape){
+                padding-bottom: 4rem;
+            }
+        }
+
+        .mr-home-page & {
+            padding: 6rem 0 2rem; 
+
+            @include responsive(tablet-portrait){
+                padding: 4rem 0 2rem;
+            }
+        }
+    }
+}
+
+
+// button
+
+.slider-btn-control {
+    @include flex;
+
+    .button {
+        cursor: pointer;
+        color: $color-dark-green-1;
+        @include transition-linear-2s;
+
+        &:hover {
+            color: $color-light-violet-2;
+        }
+
+        &:disabled {
+            i {
+                opacity: 0.3;
+                cursor: auto;
+                pointer-events: none;
+            }
+        }
+
+        &.button--next {
+            margin-left: 20px;
+        }
+    }
+
+    &.s-reviews {
+        .button--previous {
+            font-size: 2rem;
+
+            @include responsive(phone-landscape){
+                padding: 10px 10px;
+            }
+        }
+
+        .button--next {
+            font-size: 2rem;
+
+            @include responsive(phone-landscape){
+                margin-left: 0;
+                padding: 10px 10px;
+            }
+        }
+    }
+
+    &.s-space {
+        .button i {
+            padding: 18px 20px;
+            border-radius: 50px;
+            border: 2px solid $color-dark-violet-1;
+            color: $color-dark-violet-1;
+            @include transition-linear-2s;
+
+            &:hover {
+                border-color: $color-light-violet-2;
+                color: $color-light-violet-2;
+            }
+        }
+    }
+}
+
+
+// Section - Review Slider
+
+.star-rating {
+    margin-bottom: 20px;
+
+    svg {
+        width: 28px;
+        padding: 6px;
+        background-color: #00B67A;
+        margin-right: 5px;
+
+        path {
+            color: $color-white;
+        }
+    }
+}
+
+.rev-avatar {
+    @include flex;
+    margin-top: 10px;
+
+    .img-avatar {
+        align-self: center;
+        margin-right: 20px;
+        width: 55px;
+    }
+
+    .mr-author {
+        color: $color-dark-green-1;
+        font-size: 16px;
+        margin: 20px 0;
+        line-height: 1.8;
+    }
+}
+
+.reviews-carousel {
+    margin-bottom: 2rem;
+    
+    .carousel-cell {
+        width: 23.666%;
+
+        @include responsive(very-small-desktop){
+            width: 30.666%;
+        }
+
+        @include responsive(tablet-portrait){
+            width: 43%;
+        }
+
+        @include responsive(small-phone-landscape){
+            width: 78%;
+        }
+    }
+
+    .inner-ctn {
+        padding: 1rem 2rem 1rem 0rem;
+        position: relative;
+    }
+
+    .rev-content {
+        color: $color-dark-green-1;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .verified {
+        display: none;
+        position: relative;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 14px;
+
+        &::before {
+            content: '\f00c';
+            @include fontawesome-font;
+            color: #36B37E;
+            background-color: rgba(54, 179, 126, 0.16);
+            padding: 5px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 10px;
+        }
+    }
+
+    .show-slider-lightbox {
+        color: #000;
+        opacity: 0.5;
+        font-size: 14px;
+        @include transition-linear-2s;
+
+        &:hover {
+            color: $color-light-violet-2;
+        }
+    }
+}
+
+#google-reviews {
+    .mr-inner-ctn {
+        @include responsive(phone-portrait) {
+
+            padding-bottom: 10rem;
+        }
+    }
+}
+
+
+// Section - Tour Our Space 
+
+
+.space-carousel {
+
+    .carousel-cell-image {
+        height: 478px;
+        margin-right: 30px !important;
+        border-radius: 10px;
+        max-width: 100%;
+        width: auto;
+        display: block;
+
+        @include responsive(phone-landscape){
+            max-width: 78%;
+            margin-right: 15px !important;
+            height: 400px;
+        }
+
+        @include responsive(small-phone-landscape){
+            height: 265px;
+        }
+
+        @include responsive(phone-medium){
+            height: 200px;
+        }
+    }
+}
+
+// PREV AND NEXT BUTTON
+
+.s-reviews {
+
+    &.for-desktop {
+        @include responsive(phone-landscape){
+            display: none;
+        }
+    }
+
+    &.for-mobile {
+        display: none;
+
+        @include responsive(phone-landscape){
+            display: none;
+        }
+    }
+}
+
+.s-space {
+    &.for-desktop {
+
+        @include responsive(tablet-portrait){
+            display: none;
+        }
+    }
+
+    &.for-mobile {
+        display: none;
+
+        @include responsive(tablet-portrait){
+           @include flex;
+           @include justify-start;
+           padding-top: 30px;
+        }
+
+        @include responsive(phone-landscape){
+            display: none;
+        }
+    }
+}
+
+// Less padding 
+
+.page-template-day-care,
+.page-template-overnight-boarding,
+.page-template-dog-walking {
+    #google-reviews {
+        padding-top: 1rem;
+    }
+}
+
+
+.more-reviews-google {
+    font-size: 16px;
+    color: #999;
+    letter-spacing: 0.5px;
+    padding-right: 50px;
+    margin-bottom: 0;
+
+    a {
+        opacity: 1;
+        border-bottom: 3px solid;
+        color: $color-light-violet-2;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}

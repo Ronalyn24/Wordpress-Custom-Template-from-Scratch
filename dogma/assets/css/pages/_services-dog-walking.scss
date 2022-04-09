@@ -1,0 +1,67 @@
+.walking-prices {
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+}
+
+.mr-section.sec-map {
+    padding: 5rem 0 4rem;
+
+    @include responsive(phone-landscape){
+        padding: 4rem 0 3rem;
+    }
+
+    &.bg-darker-v .mr-sub-title {
+        margin-bottom: 0;
+    }
+
+    .map-large {
+        border-radius: 20px;
+        margin: 2rem auto;
+    }
+}
+
+.map-zones {
+    @include flex-wrap;
+    max-width: 835px;
+    margin: 0 auto;
+    padding: 45px 0 0;
+
+    .map-zone-item {
+        background: var(--map-item-bg);
+        color: var(--map-item-color);
+        border: 2px solid var(--map-item-border-color);
+        padding: 0.5rem 1.4rem;
+        border-radius: 50px;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 800;
+
+        @include responsive(tablet-landscape){
+            font-size: 16px; 
+        }
+
+        @include responsive(small-phone-landscape){
+            padding: 8px 20px;
+            margin-bottom: 20px;
+        }
+
+        @include responsive(phone-medium){
+            width: 100%;
+        }
+
+        &:not(:last-child){
+            margin-right: 25px;
+
+            @include responsive(small-phone-landscape){
+                margin-right: 10px;
+            }
+            
+            @include responsive(phone-medium){
+                margin-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.mr-policy-page {
+    .mr-section:first-child {
+        padding-top: 14rem;
+
+        @include responsive(tablet-portrait){
+            padding-top: 12rem;
+        }
+    }
+}
+
+
+.content-item {
+    max-width: 905px;
+
+    h1.mr-title {
+        font-size: 29px;
+    }
+
+    h2.mr-title {
+        font-size: 23px;
+    }
+
+    .inner-element {
+        &:not(:last-child) {
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        a {
+            color: $color-light-violet-1;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: inside !important;
+            padding-bottom: 1.2rem;
+
+            li {
+                padding-bottom: 0.6rem;
+                line-height: 1.5;
+                list-style-type: disc;
+                display: list-item;
+            }
+        }
+
+        figcaption {
+            font-weight: bold;
+            padding-bottom: 0.6rem;
+        }
+    }
+}
+
+
+.termly-cookie-preference-button {
+    height: 36px;
+    padding: 0 1.5rem 2px !important;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #222;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    font-size: 16px !important;
+}

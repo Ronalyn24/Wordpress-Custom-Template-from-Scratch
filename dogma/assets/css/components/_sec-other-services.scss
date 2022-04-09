@@ -1,0 +1,204 @@
+.mr-section.sec-other-services {
+    padding: 0;
+
+    .mr-row-columns {
+        width: 100%;
+        max-width: 100%;
+        @include align-items-center;
+        padding: 6rem 0;
+
+        @include responsive(very-small-desktop){
+            padding: 4rem 0;
+        }
+
+        @include responsive(tablet-portrait){
+            padding: 2rem 0;
+            flex-direction: column;
+        }
+
+        .col-content {
+            padding: 5% 8% 5% 14.66%;
+
+            @include responsive(desktop){
+                padding: 40px 8% 40px 8%;
+            }
+
+            @include responsive(tablet-portrait){
+                width: 100%;
+            }
+
+            @include responsive(small-phone-landscape){
+                padding: 30px 8% 40px 8%;
+            }
+
+            p {
+                line-height: 1.8;
+            }
+        }
+
+        .col-large-img {
+
+            @include responsive(tablet-portrait){
+                width: 100%;
+                padding: 0 8% 50px;
+            }
+
+            @include responsive(small-phone-landscape){
+                padding: 0 8% 33px;
+            }
+
+            img {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+
+                @include responsive(tablet-portrait){
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        [class^=col-]:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+
+    .large-img {
+        width: 100%;
+        height: 100%;
+        max-height: 650px;
+        object-fit: cover;
+
+        @include responsive(phone-portrait) {
+            max-height: none;
+        }
+    }
+
+    .row-left-img {
+
+        .col-1-of-2 {
+            position: relative;
+
+            &.col-large-img {
+
+                @include responsive(tablet-portrait){
+                    width: 100%;
+                    padding: 0 8% 50px;
+                }
+
+                img {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 10px;
+                    border-top-right-radius: 10px;
+
+                    @include responsive(tablet-portrait){
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            &:first-child {
+                order: 2;
+                padding: 0 12% 0 10%;
+
+                @include responsive(desktop){
+                    padding: 0 8%;
+                }
+
+                @include responsive(tablet-portrait){
+                    order: 1;
+                    width: 100%;
+                    padding: 40px 8% 40px 8%;
+                }
+
+                @include responsive(small-phone-landscape){
+                    padding: 30px 8% 40px 8%;
+                }
+            }
+
+            &:last-child {
+                order: 1;
+
+                @include responsive(tablet-portrait){
+                    order: 2;
+                    width: 100%;
+                    padding: 0 8% 50px;
+                }
+
+                @include responsive(small-phone-landscape){
+                    padding: 0 8% 33px;
+                }
+            }
+        }
+    }  
+}
+
+
+.row-video-monitor {
+
+    .col-1-of-2 { 
+
+        &:last-child {
+
+            @include responsive(small-phone-landscape){
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.text-lists {
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    -webkit-transform: translate(0, -29%);
+    transform: translate(0, -29%);
+
+    @include responsive(tablet-portrait){
+        right: 3%;
+        bottom: 0;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    @include responsive(small-phone-landscape){
+        bottom: -30px;
+    }
+
+    .text-item {
+        margin-bottom: 1.4rem;
+
+        @include responsive(small-phone-landscape){
+            margin-bottom: 10px;
+        }
+
+        span {
+            background: $color-white;
+            box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            padding: 18px 30px;
+            display: inline-block;
+            color: $color-dark-green-1;
+            font-size: 18px;
+
+            @include responsive(very-small-desktop){
+                font-size: 16px; 
+                padding: 15px 25px; 
+            }
+
+            @include responsive(small-phone-landscape){
+                font-size: 12px;
+                padding: 11px 15px;
+            }
+        }
+
+        &.second {
+            margin-left: 10%;
+        }
+
+        &.third {
+            margin-left: 5%;
+            width: 100%;
+        }
+    }
+}

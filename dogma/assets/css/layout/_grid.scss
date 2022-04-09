@@ -1,0 +1,90 @@
+
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    background-color: $main-wrapper-bg;
+}
+
+.mr-section {
+    position: relative;
+    padding: 6rem 0;
+
+    @include responsive(phone-portrait){
+        padding: 4rem 0;
+    }
+
+    &:first-child {
+        padding-top: 12rem;
+
+        @include responsive(phone-landscape){
+            padding: 180px 0 57px;
+        }
+
+        @include responsive(small-phone-landscape){
+            padding: 146px ​0 57px;
+        }
+    }
+}
+
+.mr-row,
+.mr-row-columns {
+    width: $default-width;
+    max-width: $default-max-width;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+.mr-column {
+    display: block;
+    width: 100%;
+}
+
+
+[class^="col-"]:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.mr-inner-content {
+    display: block;
+    width: 100%;
+}
+
+
+.mr-row-columns {
+    @include flex;
+    @include justify-space-between;
+    flex-direction: row;  
+
+    .col-1-of-2 {
+        width: calc((100% - 0rem) / 2);       
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$spacing-horizontal}) / 3);
+    }
+
+    .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * #{$spacing-horizontal}) / 3) + #{$spacing-horizontal});
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$spacing-horizontal}) / 4);
+    }
+
+    .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * #{$spacing-horizontal}) / 4) + #{$spacing-horizontal});
+    }
+
+    .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * #{$spacing-horizontal}) / 4) + 2 * #{$spacing-horizontal});
+    }
+}

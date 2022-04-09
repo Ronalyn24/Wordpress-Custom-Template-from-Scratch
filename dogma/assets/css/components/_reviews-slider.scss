@@ -1,0 +1,90 @@
+
+.mr-section.sec-slider {
+    padding-bottom: 2rem;
+
+    .mr-row {
+        margin: 0 0 0 auto;
+        max-width: 1710px;
+        width: 95%;
+    }
+
+    .google-logo {
+        margin-bottom: 2.6rem;
+    }
+}
+
+.reviews-carousel {
+
+    .star-rating {
+        margin-bottom: 2rem;
+
+        svg {
+            width: 28px;
+            padding: 6px;
+            background-color: #00B67A;
+            margin-right: 5px;
+    
+            path {
+                color: $color-white;
+            }
+        }
+    }
+    
+    .carousel-cell {
+        width: 25%;
+    }
+
+    .inner-ctn {
+        @include flex;
+        flex-direction: column;
+        padding: 1rem 1rem;
+    }
+
+    .rev-content {
+        color: $color-dark-green-1;
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .rev-avatar {
+        @include flex;
+
+        .img-avatar {
+            align-self: center;
+            margin-right: 20px;
+            width: 55px;
+        }
+    }
+
+    .mr-author {
+        color: $color-dark-green-1;
+        font-size: 1.3rem;
+    }
+
+    .verified {
+        display: block;
+        position: relative;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 1.2rem;
+
+        &::before {
+            content: '\f00c';
+            @include fontawesome-font;
+            color: #36B37E;
+            background-color: rgba(54, 179, 126, 0.16);
+            padding: 5px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 10px;
+        }
+    }
+}
+
+// Less padding 
+
+.page-template-day-care {
+    #google-reviews {
+        padding-top: 1rem;
+    }
+}

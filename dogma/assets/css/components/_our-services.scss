@@ -1,0 +1,161 @@
+.mr-section.sec-services {
+    padding: 5rem 0 2rem;
+
+    @include responsive(tablet-portrait){
+        padding: 4rem 0 2rem;
+    }
+
+    .mr-sub-title {
+        margin-bottom: 20px;
+    }
+}
+
+.service-items {
+    @include flex-wrap;
+    padding: 1.3rem 0 1rem;
+
+    &.vertical {
+        display: block;
+
+        @include responsive(tablet-portrait){
+            @include flex-wrap;
+        }
+
+        .ser-item {
+            width: 100%;
+            margin-bottom: 2rem;
+            margin-right: 0;
+            padding-bottom: 0;
+
+            @include responsive(tablet-portrait){
+                width: 48%;
+                margin-right: 3%;
+            }
+
+            @include responsive(small-phone-landscape){
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.no-text {
+
+        .ser-item {
+            padding-bottom: 0;
+            margin-bottom: 0;
+
+            .image-container {
+                margin-bottom: 30px;
+                height: 92%;
+            }
+        }
+    }
+    
+    .ser-item {
+        width: 31.6%;
+        margin-bottom: 4rem;
+        margin-right: 2.6%; 
+        position: relative;
+        padding-bottom: 3.6rem;
+
+        @include responsive(tablet-portrait){
+            width: 47.333%;
+            margin-bottom: 45px;
+            padding-bottom: 2.3rem;
+        }
+
+        @include responsive(small-phone-landscape){
+            width: 100% !important; 
+            margin-right: 0; 
+        }
+
+        &:nth-child(2n) {
+
+            @include responsive(tablet-portrait){
+                margin-right: 0;
+            }
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0; 
+
+            @include responsive(tablet-portrait){
+                margin-right: 2.6%; 
+            }
+            @include responsive(small-phone-landscape){
+                margin-right: 0; 
+            }
+        }
+
+        .image-container {
+            margin-bottom: 23px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .thumbnail-img {
+            @include image-object-fit;
+        }
+
+        .mr-title {
+            color: $color-dark-violet-0;
+            font-size: 20px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $color-dark-violet-1;
+            padding-right: 4%;
+        }
+    }
+}
+
+
+// Dog training page
+
+.mr-section.sec-dog-train {
+    .mt-content {
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+}
+
+.mr-section.sec-other-quest {
+    padding: 5rem 0;
+
+    @include responsive(tablet-portrait){
+        padding: 4rem 0 3rem !important;
+    }
+
+    .mr-row-columns.row-faq {
+
+        @include responsive(tablet-portrait){
+            flex-direction: column;
+        }
+
+        .col-2-of-3 {
+            max-width: 600px;
+
+            @include responsive(tablet-portrait){
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        .col-1-of-3 {
+            width: calc((100% - 2 * -12rem) / 3);
+            padding-left: 4%;
+            padding-top: 6%;
+
+            @include responsive(tablet-portrait){
+                max-width: 100%;
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.mr-sign-in-page {
+    .mr-section:first-child {
+
+        @include responsive(phone-landscape){
+            padding: 150px 0 70px;
+        }
+    }
+}
+
+
+.sign-in-form {
+    border-radius: 50px;
+    background: $color-white;
+    box-shadow:  41px 41px 82px #d9d9d9, -41px -41px 82px $color-white;
+    max-width: 635px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 5rem 9% 7rem;
+
+    @include responsive(small-phone-landscape){
+        padding: 3rem 9% 4rem;
+        border-radius: 35px;
+    }
+
+    input[type=submit] {
+        cursor: pointer;
+        background: $color-black;
+        color: $color-white;
+        border: none;
+        padding: 0.4rem 2.5rem 0.6rem;
+        border-radius: 50px;
+        @include transition-linear-2s;
+        outline: none;
+
+        &:hover {
+            background-color: $color-light-violet-2;
+            color: $color-white;
+        }
+
+        @include responsive(phone-portrait){
+            margin-bottom: 15px;
+            width: 100%;
+        }
+    }
+
+    .field-input {
+        width: 100%;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid #d1d1d1;
+        padding: 10px;
+
+        &::-webkit-input-placeholder {
+            color: $color-black;
+        }
+    }
+
+    .submit {
+        padding: 1.5rem 0 0;
+        @include flex;
+        @include justify-space-between;
+        @include align-items-center;
+
+        @include responsive(phone-portrait){
+            flex-direction: column;
+            @include align-items-start;
+        }
+    }
+}

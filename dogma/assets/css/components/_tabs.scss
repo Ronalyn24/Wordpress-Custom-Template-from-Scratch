@@ -1,0 +1,571 @@
+.mr-section.sec-gen-tab {
+    padding: 5rem 0;
+
+    .mr-home-page & {
+        padding: 3rem 0;
+
+        @include responsive(tablet-portrait){
+            padding: 0rem 0 3rem;
+        }
+
+        @include responsive(phone-landscape){
+            padding: 2rem 0 4rem;
+        }
+    }
+
+    &.sec-pricing-home {
+        padding: 5rem 0 0;
+    }
+
+    .page-template-dog-training &,
+    .page-template-agility-playgroups & {
+        padding: 5rem 0 0;
+    }
+
+}
+
+.gen-tab-content {
+
+    .tab-content-wrapper {
+        display: none;
+
+        &.tab-current {
+            display: block;
+        }
+
+        &#tab-inner-content-3 {
+
+            @include responsive(small-phone-landscape){
+                padding-right: 8%;
+            }
+
+            .tab-inner-wrap .tab-inner-item {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .mr-title {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+        color: $color-dark-green-1;
+
+        @include responsive(phone-portrait){
+            font-size: 17px;
+        }
+    }
+
+    .price {
+        color: $color-dark-green-1;
+        margin-right: 10px;
+    }
+
+    .image-container {
+        margin-bottom: 23px;
+        width: 100%;
+        height: 100%;
+        max-height: 460px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @include responsive(small-phone-landscape){
+            max-height: 350px;
+        }
+
+        @include responsive(phone-portrait){
+            max-height: 300px;
+        }
+    }
+
+    .thumbnail-img {
+        @include image-object-fit;
+    }
+}
+
+
+// GENERAL TAB HEADER PRICING 
+
+.mr-row.mr-tab {
+
+    @include responsive(small-phone-landscape){
+        width: 100%;
+        padding-left: 7%;
+    }
+
+    .tab-top-content {
+
+        @include responsive(small-phone-landscape){
+            width: $default-width;
+            max-width: $default-max-width;
+        }
+            
+        .tab-header {
+            padding-right: 0;
+        }
+    }
+}
+
+
+// Tab Inner Items
+
+.gen-tab-content .tab-inner-wrap {
+
+    @include responsive(small-phone-landscape){
+        @include flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        @include scrop-snap-x;
+    }
+}
+
+
+.tab-inner-wrap {
+    @include flex-wrap;
+
+    .tab-inner-item {
+        width: 31.6%;
+        margin-bottom: 4rem;
+        margin-right: 2.6%; 
+        position: relative;
+        @include transition-linear-2s;
+
+        @include responsive(tablet-portrait){
+            width: 47.333%;
+            margin-bottom: 45px;
+        }
+
+        .scroll-snap & {
+
+            @include responsive(small-phone-landscape){
+                --column-gap: 12px;
+                --column-offset: 20px;
+                -webkit-flex: 0 0 calc(75% - 20px);
+                -ms-flex: 0 0 calc(75% - 20px);
+                flex: 0 0 calc(75% - 20px);
+                margin: 0 12px 40px 0 !important;
+                padding: 0 !important;
+            }
+        }
+
+        &:nth-child(2n) {
+
+            @include responsive(tablet-portrait){
+                margin-right: 0;
+            }
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0; 
+
+            @include responsive(tablet-portrait){
+                margin-right: 2.6%; 
+            }
+            @include responsive(small-phone-landscape){
+                margin-right: 0; 
+            }
+        }
+
+        .col-one & {
+
+            width: 100%;
+            margin-right: 0;
+            
+            &:nth-child(2),
+            &:last-child {
+                margin-right: 0;
+            } 
+        }
+    
+        .col-two & {
+         
+            width: 48%;
+            
+            &:nth-child(2),
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 2.6%;
+
+                @include responsive(small-phone-landscape){
+                    margin-right: 0;
+                }
+            }
+        }
+    
+        .col-four & {
+
+            width: 23.05%;
+            margin-right: 2.6%;
+
+            @include responsive(tablet-landscape){
+                width: 48%; 
+            }
+
+            @include responsive(small-phone-landscape){
+                width: 100%;
+                margin-right: 0;
+                padding-bottom: 2rem;
+            }
+
+            &:nth-child(2n) {
+                @include responsive(tablet-landscape){
+                    margin-right: 0;
+                } 
+            }
+            
+            &:nth-child(4),
+            &:nth-child(8) {
+                margin-right: 0;
+            }
+
+            .image-container {
+                max-height: 365px;
+
+                @include responsive(small-desktop){
+                    max-height: 295px;
+                }
+
+                @include responsive(tablet-landscape){
+                    max-height: 400px !important;
+                }
+
+                @include responsive(tablet-portrait){
+                    max-height: 300px !important;  
+                }
+            }
+        }
+
+        .mr-link {
+            font-size: 16px;  
+        }
+
+        &.with-boxes {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 2.6%;
+
+            @include responsive(very-small-desktop){
+                margin-bottom: 30px;
+            }
+
+            .box-item.left-box {
+                border-radius: 0;
+                margin-bottom: 0;
+                width: 100%;
+                height: 100%;
+                max-height: 355px;
+
+                @include responsive(small-desktop){
+                    max-height: 290px;
+                }
+
+                @include responsive(tablet-portrait){
+                    max-height: 230px;
+                }
+
+                @include responsive(phone-landscape){
+                    max-height: 190px; 
+                }
+
+                @include responsive(small-phone-landscape){
+                    max-height: 215px;
+                }
+
+                @include responsive(phone-portrait){
+                    max-height: 190px;
+                }
+
+                @include responsive(phone-medium){
+                    max-height: 160px; 
+                }
+            }
+
+            .box-item.right-box {
+                width: 100%;
+                padding: 30px 13%;
+                color: $color-white;
+            }
+
+            .mr-headline {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                margin-bottom: 2.3rem;
+                padding-bottom: 1rem;
+            }
+
+            .sub-text {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+ 
+            .mr-title {
+                color: $color-white;
+                margin-bottom: 5px;
+                font-size: 32px;
+
+                @include responsive(tablet-portrait){
+                    font-size: 30px;
+                }
+
+                @include responsive(phone-landscape){
+                    font-size: 26px;
+                }
+            }
+
+            .inner-box-lists {
+                margin-bottom: 35px;
+
+                @include responsive(tablet-portrait){
+                    margin-bottom: 30px;
+                }
+
+                .price {
+                    color: $color-white;
+                    font-size: 16px;
+                }
+                .mr-title {
+                    font-size: 18px; 
+
+                    @include responsive(phone-landscape){
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &.mr-fullwidth {
+
+            .mr-title {
+                font-size: 25px;
+            }
+            
+            .sub-text {
+                font-size: 16px;
+
+                &.bottom {
+                    max-width: 890px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &.bg-darker-v {
+            padding: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+
+            @include responsive(small-phone-landscape){
+                padding: 2.6rem 1rem 3rem;
+            }
+
+            .mr-title, .sub-text, .price {
+                color: $color-white;
+            }
+        }
+    }
+
+    .elem-booking {
+        padding: 7.5% 5%;
+        width: 48.66%;
+        height: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        align-self: baseline;
+
+        @include responsive(tablet-landscape){
+            width: 100%;
+        }
+
+        @include responsive(small-phone-landscape){
+            display: none;
+        }
+
+        .mr-title {
+            color: $color-white;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .inner-prices-list {
+        @include flex;
+        padding: 3rem 0px 2rem;
+        max-width: 950px;
+        margin: 0 auto;
+
+        @include responsive(tablet-portrait){
+            flex-direction: column;
+        }
+
+        @include responsive(small-phone-landscape){
+            padding: 1rem 1% 2rem;
+        }
+
+        .inner-price-item {
+            width: 33%;
+            padding: 10px 10px 20px;
+
+            @include responsive(tablet-portrait){
+                width: 100%;
+            }
+
+            .mr-title {
+                font-size: 18px;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+// Tab Header
+
+.tab-header {
+    @include flex-wrap;
+    @include align-items-center;
+    margin-left: auto;
+    padding-right: 4rem;
+
+    @include responsive(tablet-portrait){
+        padding-right: 30px;
+        @include align-items-start;
+        margin-left: inherit;
+    }
+
+    .space-tab-item,
+    .gen-tab-item {
+        padding: 1rem;
+        cursor: pointer;
+        color: $color-lighter-green-1;
+
+        @include responsive(small-desktop){
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        @include responsive(phone-landscape){
+            padding: 4px 14px !important;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 29px;
+            margin-right: 9px;
+            margin-bottom: 15px;
+        }
+
+        @include responsive(small-phone-landscape){
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        &.space-current,
+        &.tab-current {
+            font-weight: bold;
+            color: $color-dark-violet-1;
+
+            @include responsive(phone-landscape){
+                color: $color-white;
+                background-color: #222222;
+            }
+
+            &:hover {
+                color: $color-dark-violet-1;
+
+                @include responsive(phone-landscape){
+                    color: $color-white;
+                    background-color: #222222;
+                }
+            }
+        }
+
+        &:hover {
+            color: $color-light-violet-2;
+        }
+    }
+}
+
+
+.top-content,
+.tab-top-content {
+    @include flex;
+    @include justify-space-between;
+    @include align-items-center;
+    padding: 2rem 0;
+
+    @include responsive(phone-landscape){
+        flex-direction: column;
+        @include align-items-start;
+        padding: 0 0 2rem 0;
+    }
+
+    .sec-space & {
+        @include flex-wrap;
+        max-width: 1295px;
+        padding: 0 3rem 2rem 0;
+
+        @include responsive(tablet-portrait){
+            padding: 0 0 2rem 0;
+        }
+    }
+
+    .mr-title {
+        padding-right: 2rem;
+
+        @include responsive(phone-landscape){
+            padding-right: 0;
+            width: 100%;
+        }
+    }
+}
+
+
+// Section - Tour Our Space 
+
+.space-tab-content {
+    
+    .space-content-wrapper {
+        display: none;
+
+        &.space-current {
+            display: block; 
+        }
+    }
+}
+
+
+// scrollbar
+
+.tab-inner-wrap::-webkit-scrollbar {
+    background-color: #f1f1f1;
+    width: 1px;
+}
+  
+.tab-inner-wrap::-webkit-scrollbar-thumb {
+background-color: rgba(45,19,56, 0.62);
+border: 1px solid rgba(45,19,56, 0.62);
+border-radius: 10px;
+}
+
+
+// Dog Boarding 
+
+#tab-inner-content-2 {
+
+    .tab-inner-wrap {
+
+        .inner-prices-list {
+            padding: 3rem 0px 6rem;
+
+            @include responsive(tablet-portrait){
+                padding: 3rem 0px 1rem;   
+            }
+
+            .inner-price-item {
+                padding: 10px 14px 20px;
+            }
+        }
+    }
+}

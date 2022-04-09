@@ -1,0 +1,33 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_mixins.scss";
+@import "abstracts/_animations.scss";
+@import "abstracts/_media-queries.scss";
+
+@import "base/_reset.scss";
+@import "base/_typography.scss";
+
+@import "components/_buttons.scss";
+@import "components/_forms.scss";
+@import "components/_sliders.scss";
+@import "components/_accordion.scss";
+@import "components/_partners-logo.scss";
+@import "components/_our-services.scss";
+@import "components/_sec-other-services.scss";
+@import "components/_sec-serving-best-dogs.scss";
+@import "components/_sec-why-choose-dogma.scss";
+@import "components/_sec-before-we-get-started.scss";
+@import "components/_tabs.scss";
+@import "components/_lightbox.scss";
+@import "components/_video-tutorials.scss";
+
+@import "layout/_all-pages.scss";
+@import "layout/_footer.scss";
+@import "layout/_grid.scss";
+@import "layout/_header.scss";
+
+@import "pages/_home.scss";
+@import "pages/_about.scss";
+@import "pages/_services-dog-walking.scss";
+@import "pages/_instagram.scss";
+@import "pages/_privacy-policy.scss";
+@import "pages/_sign-in.scss";

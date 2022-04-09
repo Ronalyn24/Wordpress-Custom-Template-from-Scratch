@@ -1,0 +1,92 @@
+.mr-section.sec-partners {
+    padding: 4rem 0 4rem;
+
+    @include responsive(phone-landscape){
+        padding-top: 45%;
+    }
+
+    @include responsive(phone-portrait){
+        padding-top: 43%;
+    }
+
+     .mr-title {
+        font-size: 20px;
+        margin: 0 auto 25px;
+        color: $color-dark-violet-1;
+        line-height: 1.7;
+        font-weight: bold;
+
+        @include responsive(tablet-portrait){
+            font-size: 18px;
+        }
+
+        @include responsive(phone-landscape){
+            font-size: 20px;
+        }
+    }
+
+    .mr-row-columns {
+        @include flex-wrap;
+
+        .col-1-of-3 {
+            width: calc((100% - 2 * 0rem) / 3);
+            margin-right: 0;
+
+            @include responsive(phone-landscape){
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+                background-color: rgba(90, 113, 132, 0.12);
+                box-shadow: 13px 13px 26px rgba(29, 14, 46, 0.15), -13px -13px 26px #f7f0ff;
+                padding: 3rem 2rem;
+                border-radius: 25px;
+            }
+
+            &:not(:last-child) {
+
+                @include responsive(phone-landscape){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .partner-items {
+
+        .box-content {
+            text-align: center;
+
+            @include responsive(phone-landscape){
+                max-width: 100% ​!important;
+                margin: 0 auto !important;
+            } 
+
+            img {
+                width: 100%;
+                max-width: 240px;
+
+                &.expertise {
+                    max-width: 210px;
+                }
+
+                &.pawp {
+                    max-width: 200px;
+                }
+            }
+        }
+
+        &:first-child .box-content {
+            max-width: 225px;
+
+        }
+        &:last-child {
+            @include flex;
+            @include justify-end;
+
+            .box-content {
+                max-width: 330px;
+                margin: 0 0 auto; 
+            }
+        }
+    }
+}

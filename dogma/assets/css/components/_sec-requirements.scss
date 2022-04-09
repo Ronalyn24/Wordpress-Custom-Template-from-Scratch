@@ -1,0 +1,33 @@
+.requirments-items {
+
+    p, li {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    a {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .req-item {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+
+        > ul {
+            list-style-type: disc;  
+            padding-left: 30px;      
+        }
+
+        &::before {
+            content: '\f00c';
+            @include fontawesome-font;
+            color: #36B37E;
+            font-size: 15px;
+            position: absolute;
+            left: 0;
+        }  
+
+    }
+}

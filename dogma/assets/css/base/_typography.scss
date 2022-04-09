@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'bernardo_moda_boldregular';
+    src: url('../fonts/bernardo-moda-bold-webfont.woff2') format('woff2'),
+         url('../fonts/bernardo-moda-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"proxima-nova";
+    src:url("../fonts/regular.woff2") format("woff2"),
+        url("../fonts/regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:"proxima-nova";
+    src:url("../fonts/semi-bold.woff2") format("woff2"),
+        url("../fonts/s6mi-bold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:"proxima-nova";
+    src:url("../fonts/bold.woff2") format("woff2"),
+        url("../fonts/bold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:"proxima-nova";
+    src:url("../fonts/extra-bold.woff2") format("woff2"),
+        url("../fonts/extra-bold.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.bernard-font {
+    font-family: $bernardo-font-family;
+}
+
+.bernard-font-uppercase {
+    font-family: $bernardo-font-family;
+    text-transform: uppercase;
+}
+
+/*===========================================
+*   GENERAL
+*============================================*/
+
+body {
+    line-height: 1.6;
+    color: $color-black;
+    font-size: $default-font-size;
+    font-family: $default-font-family;
+    font-weight: normal;
+  
+    @include responsive(phone-portrait) {
+      font-size: 17px;
+    }
+}
+
+h1, h2, h3, h4 {
+    z-index: 99;
+    position: relative;
+    letter-spacing: .01em;
+    -webkit-font-smoothing: auto !important;
+}
+
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+p, li, a {
+    font-weight: normal;
+    font-size: 20px;
+    z-index: 99;
+    position: relative;
+
+    @include responsive(phone-portrait){
+        font-size: 17px !important;
+    }
+
+}
+
+h1 {
+    font-size: 43px;
+    line-height: 1.6;
+    // font-size: 56px;
+    // line-height: 1.2;
+    margin-bottom: 28px;
+
+    @include responsive(tablet-portrait){
+        // font-size: 47px;
+    }
+    @include responsive(phone-landscape){
+        font-size: 40px;
+    }
+    @include responsive(phone-portrait){
+        font-size: 33px;
+    }
+}
+
+.headline-bolder {
+    font-weight: 900;   
+}
+
+.mr-sub-title {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 1.6;
+    // font-size: 48px;
+    // line-height: 1.2;
+    margin-bottom: 20px;
+
+    @include responsive(very-small-desktop){
+        font-size: 40px;
+    }
+
+    @include responsive(phone-landscape){
+        font-size: 36px; 
+    }
+
+    @include responsive(phone-portrait){
+        font-size: 33px; 
+    }
+
+    @include responsive(phone-medium){
+        font-size: 30px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 1.6;
+    // font-size: 32px;
+    // line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.v-small-title {
+    font-size: 20px;
+    margin: 0 0 5px;
+}
+
+.v-small-text {
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.v-small-text p {
+
+    font-size: 18px;
+    line-height: 1.9;
+
+    &:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+}
+
+
+// Flex align items
+
+.items-start {
+    @include align-items-start;
+}
+
+.items-end {
+    @include align-items-end;
+}
+
+
+// ALIGNMENT
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+// Image Alignment
+
+.img-right {  
+    margin: 0 0 0 auto;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+// text color
+
+
+.white-text {
+    color: $color-white;
+
+    p {
+        color: $color-white;
+    }
+}
+
+.l-violet-text {
+    color: $color-light-violet-1;  
+}
+
+.d-violet-text {
+    color: $color-dark-violet-1;  
+}
+
+.l-green-text {
+    color: $color-lighter-green-1;  
+}
+
+.span-pink span {
+    color: $color-light-violet-3;
+}
+
+// Background color
+
+.bg-lighter-v {
+    background-color: $color-lighter-violet-1;
+}
+
+.bg-darker-v {
+    background-color: $color-dark-violet-3;
+
+    .mr-sub-title {
+        margin-bottom: 25px;
+    }
+}
+
+.bg-lighter-blue {
+    background-color: $color-lighter-blue-1;
+}
+

@@ -1,0 +1,112 @@
+
+.mr-section.sec-get-started {
+    padding: 75px 0 20px;
+}
+
+
+.service-items {
+
+    &.dark-bg {
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.9;
+            color: $color-white;
+            padding-right: 0;
+        }
+    
+        a {
+            font-weight: bold;
+            font-size: 16px;
+            color: $color-white;
+        }
+
+        ul {
+            list-style-type: disc;  
+            padding-left: 30px;      
+        }
+
+        .ser-item {
+
+            .mr-title {
+                color: $color-white;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .ser-item.no-bottom-spacing {
+        padding-bottom: 0;
+    }
+
+    &.col-one {
+
+        .ser-item {
+            width: 100%;
+            margin-right: 0;
+            
+            &:nth-child(2),
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.col-two {
+
+        .ser-item {
+            width: 48%;
+            
+            &:nth-child(2),
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.col-four {
+
+        .ser-item {
+            width: 23.05%;
+            margin-right: 2.6%;
+
+            @include responsive(tablet-landscape){
+                width: 48%; 
+            }
+
+            @include responsive(small-phone-landscape){
+                width: 100%;
+                margin-right: 0;
+                padding-bottom: 2rem;
+            }
+
+            &:nth-child(2n) {
+                @include responsive(tablet-landscape){
+                    margin-right: 0;
+                } 
+            }
+            
+            &:nth-child(4),
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+.mr-section.sec-other-quest {
+    padding: 5rem 0;
+}
+
+.adt-inner-ctn {
+
+    .add-info ul {
+        list-style: disc;
+        padding: 0 0 20px 22px;
+    }
+}
+
+.required-tag {
+    @include required;
+}

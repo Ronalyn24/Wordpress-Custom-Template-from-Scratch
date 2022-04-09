@@ -1,0 +1,53 @@
+
+.mr-insta-page {
+    .sbi_photo {
+        border-radius: 10px;
+    }
+
+    .mr-section:first-child {
+        padding-top: 6rem;
+    }
+}
+
+#sb_instagram {
+    padding-bottom: 4rem !important;
+
+    .sb_instagram_header {
+        display: none;
+    }
+
+    // Load More Button
+
+    #sbi_load .sbi_load_btn {
+        display: inline-block;
+        padding: 0.40em 2.3em;
+        background-color: $color-white;
+        border: 2px solid $color-dark-violet-3;
+        color: $color-dark-violet-3;
+        border-radius: 50px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 1.7em;
+        min-width: 165px;
+        @include transition-linear-2s;
+        text-transform: capitalize;
+        margin: 25px 0;
+    
+        @include responsive(phone-portrait){
+            padding: 0.5em 0;
+        }
+    
+        &:hover {
+            background-color: $color-light-violet-2;
+            border-color: $color-light-violet-2;
+            color: $color-white;
+        }
+    }
+
+    #sbi_load .sbi_follow_btn {
+        display: none;
+    }
+}
+
+
