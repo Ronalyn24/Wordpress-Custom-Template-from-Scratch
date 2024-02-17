@@ -1,4 +1,2 @@
 Wordpress Custom Template from Scratch <br>
-the pages are dynamic and converted this into the old ways 
-I used the following code: html5, SCSS, PHP and jQuery
-aside form that i used ACF pro, Custom Post type plugins for the dynamic content and flicity slider plugin for the sliders
+The pages are dynamically generated, and to achieve this, I utilized a combination of HTML5, SCSS, PHP, and jQuery. Additionally, I incorporated advanced tools such as ACF Pro and Custom Post Type plugins to manage dynamic content effectively. To enhance the user experience, I integrated the Flickity Slider plugin for interactive sliders, ensuring seamless navigation and engagement across the site.
